@@ -65,10 +65,10 @@ from typing import List
 
 def isprime(num):
     #Find the error and rewrite the correct code. 
-    if num < 1:
+    if num < 2:
         return False
     for i in range(2, num):
-        if num % i != 0:
+        if num % i == 0:
             return False
     return True
 
@@ -76,7 +76,7 @@ def isprime(num):
 def check_primes(nums: List[int]) -> List[bool]:
     #Find the error and rewrite the correct code. 
     results = []
-    for i in range(1, len(nums)):
+    for i in nums:
         results.append(isprime(i))
     return results
 
