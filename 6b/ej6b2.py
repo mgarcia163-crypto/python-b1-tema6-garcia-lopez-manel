@@ -46,21 +46,20 @@ Exemple:
 
 
 from typing import List
-import pdb
-
     
 def average_of_even_numbers(numbers):
     #Find the error and rewrite the correct code.
 
-    total = -1
+    total = 0
     count = 0
     for num in numbers:
-        pdb.set_trace()
         if num % 2 == 0:
             total += num
-        count += 1
-    return total
-average_of_even_numbers([2, 3, 4])
+            count += 1
+    if count == 0:
+        return 0
+    average = total / count
+    return round(float(average), 2)
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
