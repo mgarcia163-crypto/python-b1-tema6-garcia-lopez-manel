@@ -77,14 +77,19 @@ Exemple:
 
 def read_txt_file(path: str) -> str:
     #Write your code here
-    pass
+    with open(path, "r", encoding="utf-8") as file:
+        return file.read()
+    
 
 
 def words_counter(text: str, word: str) -> int:
     #Write your code here
-    pass
-
-
+    matches = word
+    text_lowercase = text.lower()
+    word_lowercase = word.lower()
+    all_words = text_lowercase.split()
+    return all_words.count(word_lowercase)
+    
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 # path = "files/ej6c2_data_engineer.txt"
